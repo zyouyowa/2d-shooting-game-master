@@ -6,10 +6,15 @@ public class Spaceship : MonoBehaviour {
     public float shotDelay;
     public GameObject bullet;
     public bool canShot;
+    public GameObject explosion;
     private Rigidbody2D rigidbody2d;
 
     public void OnStart () {
         rigidbody2d = GetComponent<Rigidbody2D> ();
+    }
+
+    public void Explosion () {
+        Instantiate (bullet, transform.position, transform.rotation);
     }
 
     public void Shot (Transform origin) {

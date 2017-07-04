@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4616425643341340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4554599042235078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosition (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,8 @@ GameObject:
   - component: {fileID: 50044463719634250}
   - component: {fileID: 114531067158674418}
   - component: {fileID: 114254975790391838}
-  m_Layer: 0
+  - component: {fileID: 60162719089550616}
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4957614072825740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotPosition (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +152,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &60162719089550616
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1610280031399066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.96, y: 0.96}
+    newSize: {x: 0.96, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.13405639, y: 0.23735434}
+      - {x: -0.1259764, y: 0.23782437}
+      - {x: -0.22372212, y: 0.17095679}
+      - {x: -0.23986897, y: -0.14301439}
+      - {x: -0.119868994, y: -0.25997376}
+      - {x: 0.11709045, y: -0.25832242}
+      - {x: 0.2474181, y: -0.13688076}
+      - {x: 0.22891542, y: 0.18763651}
+      - {x: 0.22891542, y: 0.18763651}
 --- !u!95 &95175166988355368
 Animator:
   serializedVersion: 3
@@ -183,6 +217,7 @@ MonoBehaviour:
   shotDelay: 0.3
   bullet: {fileID: 1016442476655180, guid: 8055404042dd94ca8ae791e92702410c, type: 2}
   canShot: 0
+  explosion: {fileID: 1145338277430014, guid: fb5ce5a4bb2254a1b9dc87a76e4beda4, type: 2}
 --- !u!114 &114531067158674418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,8 +258,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -805898281
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: bf3bdd2147b394bc2b771f2556f0b49d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
