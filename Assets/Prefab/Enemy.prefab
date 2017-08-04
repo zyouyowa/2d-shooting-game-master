@@ -53,7 +53,6 @@ GameObject:
   - component: {fileID: 95175166988355368}
   - component: {fileID: 50044463719634250}
   - component: {fileID: 114531067158674418}
-  - component: {fileID: 114254975790391838}
   - component: {fileID: 60162719089550616}
   m_Layer: 9
   m_Name: Enemy
@@ -146,7 +145,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -202,22 +201,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114254975790391838
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1610280031399066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad28e108660d4aa2a38c00939c8ebbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  shotDelay: 0.3
-  bullet: {fileID: 1016442476655180, guid: 8055404042dd94ca8ae791e92702410c, type: 2}
-  canShot: 0
-  explosion: {fileID: 1145338277430014, guid: fb5ce5a4bb2254a1b9dc87a76e4beda4, type: 2}
 --- !u!114 &114531067158674418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,6 +212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d9948104b5c43d6b447f7d4c444ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  shotDelay: 0.5
+  bullet: {fileID: 1016442476655180, guid: 8055404042dd94ca8ae791e92702410c, type: 2}
+  canShot: 0
+  explosion: {fileID: 1145338277430014, guid: fb5ce5a4bb2254a1b9dc87a76e4beda4, type: 2}
+  hp: 1
 --- !u!212 &212283243690013304
 SpriteRenderer:
   m_ObjectHideFlags: 1

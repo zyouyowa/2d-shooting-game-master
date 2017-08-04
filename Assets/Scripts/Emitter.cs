@@ -5,8 +5,10 @@ using UnityEngine;
 public class Emitter : MonoBehaviour {
     public GameObject[] waves;
     private int currentWave;
+    private Manager manager;
 
     void Start () {
+        manager = FindObjectOfType<Manager> ();
         if (waves.Length > 0) {
             StartCoroutine (StartWave ());
         }
@@ -15,6 +17,10 @@ public class Emitter : MonoBehaviour {
     IEnumerator StartWave () {
         WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame ();
         while (true) {
+            while (!manager.isPlaying) {
+                yield return waitForEndOfFrame;
+            }
+
             GameObject wave = Instantiate (
                                   original: waves [currentWave], 
                                   position: transform.position, 
